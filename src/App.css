@@ -28,6 +28,80 @@
   color: #61dafb;
 }
 
+.Map-container {
+  background-color: #9dc3fb;
+  align-items:  center;
+  justify-content: center;
+  display: flex;
+}
+
+.province-layer:hover {
+  cursor: pointer;
+}
+
+.level-menu {
+    background-color: white;
+    width: 200px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    border-color: black;
+    text-indent: 10px;
+}
+
+.level-5:hover {
+  cursor: pointer;
+  background-color: #e84c3d;
+}
+
+.level-4:hover {
+  cursor: pointer;
+  background-color: #d58337;
+}
+
+.level-3:hover {
+  cursor: pointer;
+  background-color: #f3c218;
+}
+
+.level-2:hover {
+  cursor: pointer;
+  background-color: #30cc70;
+}
+
+.menu-header {
+  font-weight: bold;
+}
+
+.menu-header,
+.level-5,
+.level-4,
+.level-3,
+.level-2,
+.level-1 {
+  display: flex;
+  min-height: 25px;
+  align-items:center;
+}
+
+.level-1:hover {
+  cursor: pointer;
+  background-color: #3598db;
+}
+
+.level-0 {
+  display: flex;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  min-height: 25px;
+  align-items:center;
+}
+
+.level-0:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
