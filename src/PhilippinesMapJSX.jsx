@@ -1,8 +1,9 @@
 import React from "react";
 
-const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible}) => {
+const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible, setSelectedProvinceLayer}) => {
   const handleProvinceClick =  (event) => {
     setSelectedProvince(event.target.getAttribute("id"));
+    setSelectedProvinceLayer(event.target);
     setMenuPosition({ x: event.target.getBoundingClientRect().x , y: event.target.getBoundingClientRect().y});
     setMenuVisible(true);
 
@@ -12,13 +13,28 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
     setMenuVisible(false);
   }
 
+ /* const getFillColor = (provinceName) => {
+    const ugh = (prevLevels) => {
+    const updatedLevels = [...prevLevels];
+    const provinceIndex = provinceLevels.findIndex(province => province.id === provinceName);
+    switch (provinceLevels[provinceIndex].level) {
+      case 5:
+        return "#e84c3d";
+      case 4:
+        return "#d58337";
+      default:
+        return "red";
+    }
+  }
+  }*/
+
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       id="svg574"
       version="1.1"
-      height="100vh"
+      width="100vw"
       viewBox="0 0 840 1221"
       xmlSpace="preserve"
     >
@@ -32,7 +48,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           onClick={(event) => handleOutsideClick(event)}
         ></path>
       </g>
-      <g className='province-layer' id="Aurora" fill="#fff" transform="translate(427.5 375)">
+      <g className='province-layer' id="Aurora" transform="translate(427.5 375)">
         <path
           id="Aurora"
           fill="#fff"
@@ -50,11 +66,10 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           onClick={(event) => handleProvinceClick(event)}
         ></path>
       </g>
-      <g className='province-layer' id="Bataan" fill="#fff" transform="translate(330 465)">
+      <g className='province-layer' id="Bataan"  transform="translate(330 465)">
         <path
           id="Bataan"
           fill="#fff"
-          fillRule="nonzero"
           stroke="#000"
           strokeDasharray="none"
           strokeDashoffset="0"
@@ -1539,6 +1554,433 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           vectorEffect="non-scaling-stroke"
           onClick={(event) => handleProvinceClick(event)}
         ></path>
+      </g>
+      <g
+        id="g1953"
+        style={{display:'none'}}
+        strokeDasharray="none"
+        strokeDashoffset="0"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit="10"
+        strokeOpacity="1"
+        paintOrder="markers fill stroke"
+        transform="matrix(1.63481 0 0 1.6089 -381.296 -140.998)"
+      >
+        <rect
+          id="rect385"
+          width="176.299"
+          height="132.998"
+          x="544.363"
+          y="159.803"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="1.5"
+          display="inline"
+          ry="6.754"
+        ></rect>
+        <rect
+          id="rect1963"
+          width="25.835"
+          height="17.926"
+          x="530.263"
+          y="145.262"
+          fill="#e84c3d"
+          fillOpacity="1"
+          stroke="#000"
+          strokeWidth="0.525"
+          ry="4.118"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+        ></rect>
+        <rect
+          id="rect1963-1"
+          width="25.835"
+          height="17.926"
+          x="530.263"
+          y="175.262"
+          fill="#d58337"
+          fillOpacity="1"
+          stroke="#000"
+          strokeWidth="0.525"
+          ry="4.118"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+        ></rect>
+        <rect
+          id="rect1963-1-2"
+          width="25.835"
+          height="17.926"
+          x="530.263"
+          y="205.262"
+          fill="#f3c218"
+          fillOpacity="1"
+          stroke="#000"
+          strokeWidth="0.525"
+          ry="4.118"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+        ></rect>
+        <rect
+          id="rect1963-3"
+          width="25.835"
+          height="17.926"
+          x="530.676"
+          y="235.262"
+          fill="#30cc70"
+          fillOpacity="1"
+          stroke="#000"
+          strokeWidth="0.525"
+          ry="4.118"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+        ></rect>
+        <rect
+          id="rect1963-1-8"
+          width="25.835"
+          height="17.926"
+          x="530.676"
+          y="265.263"
+          fill="#3598db"
+          fillOpacity="1"
+          stroke="#000"
+          strokeWidth="0.525"
+          ry="4.118"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+        ></rect>
+        <rect
+          id="rect1963-1-2-1"
+          width="25.835"
+          height="17.926"
+          x="530.676"
+          y="295.263"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          ry="4.118"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+        ></rect>
+        <text
+          id="text2045-3-8"
+          x="723.828"
+          y="189.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-4-6"
+            x="723.828"
+            y="189.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Level: 4
+          </tspan>
+        </text>
+        <text
+          id="text2045-3-8-4"
+          x="723.828"
+          y="159.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-4-6-1"
+            x="723.828"
+            y="159.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Level: 5
+          </tspan>
+        </text>
+        <text
+          id="text2045-3-7"
+          x="723.828"
+          y="219.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-4-1"
+            x="723.828"
+            y="219.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Level: 3
+          </tspan>
+        </text>
+        <text
+          id="text2045-3-84"
+          x="723.828"
+          y="249.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-4-9"
+            x="723.828"
+            y="249.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Level: 2
+          </tspan>
+        </text>
+        <text
+          id="text2045-3-73"
+          x="723.828"
+          y="279.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-4-10"
+            x="723.828"
+            y="279.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Level: 1
+          </tspan>
+        </text>
+        <text
+          id="text2045-3-2"
+          x="723.828"
+          y="309.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-4-3"
+            x="723.828"
+            y="309.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Level: 0
+          </tspan>
+        </text>
+        <text
+          id="text2045-5"
+          x="569.215"
+          y="189.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-8"
+            x="569.215"
+            y="189.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Stayed there
+          </tspan>
+        </text>
+        <text
+          id="text2045-5-9"
+          x="569.215"
+          y="159.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-8-2"
+            x="569.215"
+            y="159.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Visited there
+          </tspan>
+        </text>
+        <text
+          id="text2045-2"
+          x="569.848"
+          y="219.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-9"
+            x="569.848"
+            y="219.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Visited there
+          </tspan>
+        </text>
+        <text
+          id="text2045-8"
+          x="569.848"
+          y="249.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-2"
+            x="569.848"
+            y="249.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Alighted there
+          </tspan>
+        </text>
+        <text
+          id="text2045-0"
+          x="568.828"
+          y="279.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-7"
+            x="568.828"
+            y="279.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Passed there
+          </tspan>
+        </text>
+        <text
+          id="text2045-4"
+          x="568.828"
+          y="309.117"
+          fill="#fff"
+          stroke="#000"
+          strokeWidth="0.525"
+          fontSize="12"
+          transform="matrix(.6117 0 0 .62154 230.623 86.575)"
+          xmlSpace="preserve"
+        >
+          <tspan
+            id="tspan2047-85"
+            x="568.828"
+            y="309.117"
+            fill="#000"
+            fillOpacity="1"
+            stroke="none"
+            strokeDasharray="none"
+            strokeWidth="0.75"
+            fontSize="12"
+          >
+            Never been there
+          </tspan>
+        </text>
+        <text
+          xmlSpace="preserve"
+          style={{ WebkitTextAlign: "center", textAlign: "center" }}
+          id="text3282"
+          x="637.208"
+          y="147.041"
+          fill="#000"
+          fillOpacity="1"
+          stroke="none"
+          strokeWidth="0.462"
+          fontSize="15"
+          textAnchor="middle"
+          transform="scale(.99204 1.00802)"
+        >
+          <tspan
+            id="tspan3280"
+            style={{ WebkitTextAlign: "center", textAlign: "center" }}
+            x="637.208"
+            y="147.041"
+            strokeWidth="0.462"
+            textAnchor="middle"
+          >
+            Philippines Travel Level 0
+          </tspan>
+        </text>
       </g>
     </svg>
   );
