@@ -49,7 +49,7 @@ const PhilippinesMap = () => {
 
   return (
     <div>
-      <PhilippinesMapJSX 
+      <PhilippinesMapJSX
               setSelectedProvince={setSelectedProvince}
               setMenuPosition={setMenuPosition}
               setMenuVisible={setMenuVisible}

@@ -30,9 +30,7 @@
 
 .Map-container {
   background-color: #9dc3fb;
-  align-items:  center;
-  justify-content: center;
-  display: flex;
+  overflow: auto;
 }
 
 .province-layer:hover {

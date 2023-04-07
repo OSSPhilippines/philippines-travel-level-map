@@ -2,9 +2,11 @@ import React from "react";
 
 const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible, setSelectedProvinceLayer}) => {
   const handleProvinceClick =  (event) => {
+    const offsetY = event.target.getBoundingClientRect().y + 210 - window.innerHeight < 0 ? 0 : event.target.getBoundingClientRect().y + 210 - window.innerHeight;
+    const offsetX = event.target.getBoundingClientRect().x + 200 - window.innerWidth < 0 ? 0 : event.target.getBoundingClientRect().x + 200 - window.innerWidth;
     setSelectedProvince(event.target.getAttribute("id"));
     setSelectedProvinceLayer(event.target);
-    setMenuPosition({ x: event.target.getBoundingClientRect().x , y: event.target.getBoundingClientRect().y});
+    setMenuPosition({ x: event.target.getBoundingClientRect().x + window.pageXOffset - offsetX, y: event.target.getBoundingClientRect().y + window.pageYOffset - offsetY});
     setMenuVisible(true);
 
   };
@@ -13,21 +15,6 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
     setMenuVisible(false);
   }
 
- /* const getFillColor = (provinceName) => {
-    const ugh = (prevLevels) => {
-    const updatedLevels = [...prevLevels];
-    const provinceIndex = provinceLevels.findIndex(province => province.id === provinceName);
-    switch (provinceLevels[provinceIndex].level) {
-      case 5:
-        return "#e84c3d";
-      case 4:
-        return "#d58337";
-      default:
-        return "red";
-    }
-  }
-  }*/
-
 
   return (
     <svg
@@ -35,6 +22,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
       id="svg574"
       version="1.1"
       width="100vw"
+      height="100vh"
       viewBox="0 0 840 1221"
       xmlSpace="preserve"
     >
@@ -1557,7 +1545,6 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
       </g>
       <g
         id="g1953"
-        style={{display:'none'}}
         strokeDasharray="none"
         strokeDashoffset="0"
         strokeLinecap="round"
