@@ -8,25 +8,21 @@ const PhilippinesMap = () => {
   const [selectedProvinceLayer, setSelectedProvinceLayer] = useState(null);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   const [menuVisible, setMenuVisible] = useState(false);
+  const [totalLevel, setTotalLevel] = useState(0);
 
- /* const handleProvinceClick = (provinceName, event) => {
-    setSelectedProvince(provinceName);
-    setSelectedProvinceLayer(event.target);
-    setMenuPosition({ x: event.clientX, y: event.clientY });
-    setMenuVisible(true);
-  }*/
+  const handleLevelClick = (selectedProvince, selectedProvinceLayer, event) => {
+    const newLevel = parseInt(event.target.getAttribute("level"));
 
-  const handleLevelClick = (selectedProvinceLayer, event) => {
-    /*setProvinceLevels(prevLevels => {
-        const updatedLevels = [...prevLevels];
-        const provinceIndex = updatedLevels.findIndex(province => province.id === provinceName);
+    const provinceIndex = provinceLevels.findIndex(province => province.id === selectedProvince);
         if (provinceIndex !== -1) {
-            updatedLevels[provinceIndex].level = newLevel;
+            provinceLevels[provinceIndex].level = newLevel;
         } else {
-            updatedLevels.push({ id: provinceName, level: newLevel})
+            provinceLevels.push({ id: selectedProvince, level: newLevel})
         }
-        return updatedLevels
-    })*/
+
+        
+        
+
     if (event.target.getAttribute("level") === '5' ) {
         selectedProvinceLayer.style.fill = "#e84c3d";
     } else if (event.target.getAttribute("level") === '4' ) {
@@ -42,6 +38,8 @@ const PhilippinesMap = () => {
 
     }
     
+    setTotalLevel(provinceLevels.reduce((a, v) => a = a + v.level, 0));
+    
     setMenuVisible(false);
   }
 
@@ -53,7 +51,8 @@ const PhilippinesMap = () => {
               setSelectedProvince={setSelectedProvince}
               setMenuPosition={setMenuPosition}
               setMenuVisible={setMenuVisible}
-              setSelectedProvinceLayer={setSelectedProvinceLayer}/>
+              setSelectedProvinceLayer={setSelectedProvinceLayer}
+              totalLevel={totalLevel}/>
       {menuVisible && (
         <div className='level-menu' style={{  
             position: 'absolute',
@@ -62,12 +61,12 @@ const PhilippinesMap = () => {
           {/* Render menu options here */}
           <div>
             <div className='menu-header'>{selectedProvince}</div>
-            <div level='5' className='level-5' onClick={(event) => handleLevelClick(selectedProvinceLayer, event)}>Lived there</div>
-            <div level='4' className='level-4' onClick={(event) => handleLevelClick(selectedProvinceLayer, event)}>Stayed there</div>
-            <div level='3' className='level-3' onClick={(event) => handleLevelClick(selectedProvinceLayer, event)}>Visited there</div>
-            <div level='2' className='level-2' onClick={(event) => handleLevelClick(selectedProvinceLayer, event)}>Alighted there</div>
-            <div level='1' className='level-1' onClick={(event) => handleLevelClick(selectedProvinceLayer, event)}>Passed there</div>
-            <div level='0' className='level-0' onClick={(event) => handleLevelClick(selectedProvinceLayer, event)}>Never been there</div>
+            <div level='5' className='level-5' onClick={(event) => handleLevelClick(selectedProvince, selectedProvinceLayer, event)}>Lived there</div>
+            <div level='4' className='level-4' onClick={(event) => handleLevelClick(selectedProvince, selectedProvinceLayer, event)}>Stayed there</div>
+            <div level='3' className='level-3' onClick={(event) => handleLevelClick(selectedProvince, selectedProvinceLayer, event)}>Visited there</div>
+            <div level='2' className='level-2' onClick={(event) => handleLevelClick(selectedProvince, selectedProvinceLayer, event)}>Alighted there</div>
+            <div level='1' className='level-1' onClick={(event) => handleLevelClick(selectedProvince, selectedProvinceLayer, event)}>Passed there</div>
+            <div level='0' className='level-0' onClick={(event) => handleLevelClick(selectedProvince, selectedProvinceLayer, event)}>Never been there</div>
           </div>
         </div>
       )}

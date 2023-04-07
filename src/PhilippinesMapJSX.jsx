@@ -1,6 +1,6 @@
 import React from "react";
 
-const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible, setSelectedProvinceLayer}) => {
+const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible, setSelectedProvinceLayer, totalLevel}) => {
   const handleProvinceClick =  (event) => {
     const offsetY = event.target.getBoundingClientRect().y + 210 - window.innerHeight < 0 ? 0 : event.target.getBoundingClientRect().y + 210 - window.innerHeight;
     const offsetX = event.target.getBoundingClientRect().x + 200 - window.innerWidth < 0 ? 0 : event.target.getBoundingClientRect().x + 200 - window.innerWidth;
@@ -1965,7 +1965,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             strokeWidth="0.462"
             textAnchor="middle"
           >
-            Philippines Level {0}
+            Philippines Level {totalLevel}
           </tspan>
         </text>
       </g>
