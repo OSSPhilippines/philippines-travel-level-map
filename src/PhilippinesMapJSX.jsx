@@ -1650,7 +1650,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1663,7 +1663,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Level: 4
           </tspan>
@@ -1675,7 +1675,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1688,7 +1688,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Level: 5
           </tspan>
@@ -1700,7 +1700,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1713,7 +1713,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Level: 3
           </tspan>
@@ -1725,7 +1725,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1738,7 +1738,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Level: 2
           </tspan>
@@ -1750,7 +1750,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1763,7 +1763,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Level: 1
           </tspan>
@@ -1775,7 +1775,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1788,7 +1788,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Level: 0
           </tspan>
@@ -1800,7 +1800,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1813,7 +1813,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Stayed there
           </tspan>
@@ -1825,7 +1825,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1838,7 +1838,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Visited there
           </tspan>
@@ -1850,7 +1850,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1863,7 +1863,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Visited there
           </tspan>
@@ -1875,7 +1875,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1888,7 +1888,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Alighted there
           </tspan>
@@ -1900,7 +1900,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1913,7 +1913,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Passed there
           </tspan>
@@ -1925,7 +1925,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
           fill="#fff"
           stroke="#000"
           strokeWidth="0.525"
-          fontSize="12"
+          fontSize="14"
           transform="matrix(.6117 0 0 .62154 230.623 86.575)"
           xmlSpace="preserve"
         >
@@ -1938,7 +1938,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             stroke="none"
             strokeDasharray="none"
             strokeWidth="0.75"
-            fontSize="12"
+            fontSize="14"
           >
             Never been there
           </tspan>
@@ -1965,7 +1965,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             strokeWidth="0.462"
             textAnchor="middle"
           >
-            Philippines Travel Level 0
+            Philippines Level {0}
           </tspan>
         </text>
       </g>
