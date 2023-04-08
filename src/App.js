@@ -1,4 +1,4 @@
-import React, { useState,  useCallback, useRef } from "react";
+import React, {  useCallback, useRef } from "react";
 import Map from "./Map"
 import './App.css'
 import { toJpeg } from 'html-to-image'
