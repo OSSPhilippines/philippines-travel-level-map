@@ -21,13 +21,13 @@ const AdsComponent = (props) => {
 
     return (
         <>
-            <ins className="adsbygoogle"
-                style={{ display: "block" }}
-                data-ad-client="ca-pub-1919396112849413"
-                data-ad-slot={dataAdSlot}
-                data-ad-format="auto"
-                data-full-width-responsive="true">
-            </ins>
+        
+        <ins class="adsbygoogle"
+     style={{display:'block'}}
+     data-ad-client="ca-pub-1919396112849413"
+     data-ad-slot="8658257981"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
         </>
     );
 };

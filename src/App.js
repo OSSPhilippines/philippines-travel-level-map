@@ -2,6 +2,7 @@ import React, {  useCallback, useRef } from "react";
 import Map from "./Map"
 import './App.css'
 import { toJpeg } from 'html-to-image'
+import AdsComponent from "./AdsComponent";
 
 function App() {
   const divRef = useRef(null);
@@ -33,7 +34,7 @@ function App() {
         </div>
         <div className="save-image-button" onClick={downloadJpg}>Save Image</div>
       </div>
-     
+      <AdsComponent dataAdSlot='8658257981' />
        </div>
   );
 }
