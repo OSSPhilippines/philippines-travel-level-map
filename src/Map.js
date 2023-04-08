@@ -3,7 +3,7 @@ import PhilippinesMapJSX from './PhilippinesMapJSX';
 import "./App.css"
 
 const PhilippinesMap = () => {
-  const [provinceLevels, setProvinceLevels] = useState([]);
+  const [provinceLevels] = useState([]);
   const [selectedProvince, setSelectedProvince] = useState(null);
   const [selectedProvinceLayer, setSelectedProvinceLayer] = useState(null);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
@@ -21,9 +21,6 @@ const PhilippinesMap = () => {
         } else {
             provinceLevels.push({ id: selectedProvince, level: newLevel})
         }
-
-        
-        
 
     if (event.target.getAttribute("level") === '5' ) {
         selectedProvinceLayer.style.fill = "#e84c3d";

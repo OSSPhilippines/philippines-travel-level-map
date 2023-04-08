@@ -4,8 +4,6 @@ import './App.css'
 import { toJpeg } from 'html-to-image'
 
 function App() {
-  const [showDialogBox, setShowDialogBox] = useState(false);
-
   const divRef = useRef(null);
   
   const fileName = 'phMap.jpg'
