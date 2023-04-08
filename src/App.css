@@ -80,6 +80,10 @@
   font-weight: bold;
 }
 
+.menu-header:hover {
+  cursor: pointer;
+}
+
 .menu-header,
 .level-5,
 .level-4,

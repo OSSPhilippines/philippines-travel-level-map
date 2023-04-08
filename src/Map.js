@@ -10,6 +10,8 @@ const PhilippinesMap = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [totalLevel, setTotalLevel] = useState(0);
 
+  const searchUrl = 'http://www.google.com/search?q="' + selectedProvince + ', Philippines"'
+
   const handleLevelClick = (selectedProvince, selectedProvinceLayer, event) => {
     const newLevel = parseInt(event.target.getAttribute("level"));
 
@@ -60,7 +62,7 @@ const PhilippinesMap = () => {
             left: menuPosition.x}} >
           {/* Render menu options here */}
           <div>
-            <div className='menu-header'>{selectedProvince}</div>
+            <div className='menu-header' onClick={() => window.open(searchUrl)}>{selectedProvince} ↗ </div>
             <div level='5' className='level-5' onClick={(event) => handleLevelClick(selectedProvince, selectedProvinceLayer, event)}>Lived there</div>
             <div level='4' className='level-4' onClick={(event) => handleLevelClick(selectedProvince, selectedProvinceLayer, event)}>Stayed there</div>
             <div level='3' className='level-3' onClick={(event) => handleLevelClick(selectedProvince, selectedProvinceLayer, event)}>Visited there</div>
