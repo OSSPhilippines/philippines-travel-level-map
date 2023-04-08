@@ -21,8 +21,6 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
       xmlns="http://www.w3.org/2000/svg"
       id="svg574"
       version="1.1"
-      width="100vw"
-      height="100vh"
       viewBox="0 0 840 1221"
       xmlSpace="preserve"
     >

@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  background-color: #9dc3fb;
 }
 
 .App-logo {
@@ -30,7 +30,15 @@
 
 .Map-container {
   background-color: #9dc3fb;
-  overflow: auto;
+ width: 100dvw;
+ height: 100dvh;
+ display: table-cell;
+}
+
+.Map-padding {
+  background-color: #9dc3fb;
+  padding-top: 20px;
+  padding-bottom: 20;
 }
 
 .province-layer:hover {
@@ -45,6 +53,7 @@
     border-radius: 10px;
     border-color: black;
     text-indent: 10px;
+    z-index: 1000;
 }
 
 .level-5:hover {
@@ -96,6 +105,25 @@
 }
 
 .level-0:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.save-image-button {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  min-height: 30px;
+  align-items: center;
+  display: flex;
+  width: 100px;
+  justify-content: center;
+  left: 50%;
+  margin-left: -50px;
+  margin-bottom: 20px;
+}
+
+.save-image-button:hover {
   cursor: pointer;
   background-color: lightgray;
 }
