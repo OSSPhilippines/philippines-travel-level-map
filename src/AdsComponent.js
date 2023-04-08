@@ -1,7 +1,6 @@
 import React, { useEffect  } from 'react';
 
-const AdsComponent = (props) => {
-    const { dataAdSlot } = props;  
+const AdsComponent = () => {
 
 
 
