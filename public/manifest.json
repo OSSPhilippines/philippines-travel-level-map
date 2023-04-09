@@ -1,15 +1,15 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "PH Travel Level",
+  "name": "My Philippines Travel Level",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "ph.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
+      "src": "ph-blank.jpg",
+      "type": "image/jpg",
       "sizes": "192x192"
     },
     {
