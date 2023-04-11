@@ -158,6 +158,7 @@ height: 100h;
 
 .link {
   color: blue;
+  display: inline;
 }
 
 .asterisk {

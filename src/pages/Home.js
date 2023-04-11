@@ -13,8 +13,8 @@ const Home = () => {
     <br></br>
     <br></br>
 
-    This project was inspired by the  <a className="link" onClick={() => window.open('https://zhung.com.tw/japanex/')}>Japan↗</a> version and was built using ReactJS. 
-    You can view the source code <a className="link" onClick={() => window.open('https://github.com/denzdelvillar/philippine-map-app')}>here↗</a>.
+    This project was inspired by the  <div className="link" onClick={() => window.open('https://zhung.com.tw/japanex/')}>Japan↗</div> version and was built using ReactJS. 
+    You can view the source code <div className="link" onClick={() => window.open('https://github.com/denzdelvillar/philippine-map-app')}>here↗</div>.
 
     <h2>How To Use</h2>
     The map is divided into the 83* Philippine provinces. All you have to do is to click on a province and choose the appropriate level of travel. 
@@ -44,11 +44,11 @@ const Home = () => {
 
     Check out my socials: 
     <br></br>
-    <a className="link" onClick={() => window.open('https://www.instagram.com/denzdelvillar')}>Instagram↗</a>
+    <div className="link" onClick={() => window.open('https://www.instagram.com/denzdelvillar')}>Instagram↗</div>
     <br></br>
-    <a className="link" onClick={() => window.open('https://www.twitter.com/denzvryan')}>Twitter↗</a>
+    <div className="link" onClick={() => window.open('https://www.twitter.com/denzvryan')}>Twitter↗</div>
     <br></br>
-    <a className="link" onClick={() => window.open('https://www.linkedin.com/in/denzdelvillar')}>LinkedIn↗</a>.
+    <div className="link" onClick={() => window.open('https://www.linkedin.com/in/denzdelvillar')}>LinkedIn↗</div>.
     </section>
     );
   };
