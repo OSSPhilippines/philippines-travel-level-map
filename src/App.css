@@ -26,8 +26,8 @@
 
 .Map-container {
   background-color: #9dc3fb;
- width: 100dvw;
- height: 100dvh;
+  width: 100dvw;
+  height: 100dvh;
  display: table-cell;
 }
 
@@ -129,7 +129,8 @@
 }
 
 .about {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   height: 100vh;
 }
 

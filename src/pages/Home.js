@@ -5,7 +5,7 @@ const Home = () => {
     return (
       <div className="about">
     
-    <h1>My Philippines Travel Level</h1>
+    <h2>My Philippines Travel Level</h2>
 
     This simple web app helps you visualize how well-travelled you are in the Philippines. 
 
@@ -30,12 +30,17 @@ const Home = () => {
 
     <h2>About Me</h2>
 
-    Hi! My name is Denz and I am a Filipino software engineer based in Singapore. This is my first time dabbling with ReactJS, and I used chatGPT heavily to help me with this project. If you have any comments or if you want to contribute to this project, please do reach out! 
+    Hi! My name is Denz and I am a Filipino software engineer based in Singapore. My Philippines travel level is embarrassingly 62.
+
+    <br></br>
+    <br></br>
+    
+    This is my first time dabbling with ReactJS, and I used chatGPT heavily to help me with this project. If you have any comments or if you want to contribute to this project, please do reach out! 
     
     <br></br>
     <br></br>
 
-    Check out my <a className="link" onClick={() => window.open('https://www.instagram.com/denzdelvillar')}>Instagram↗</a> and <a className="link" onClick={() => window.open('https://www.twitter.com/denzvryan')}>Twitter↗</a>, and <a className="link" onClick={() => window.open('https://www.linkedin.com/in/denzdelvillar')}>LinkedIn↗</a>.
+    Check out my <a className="link" onClick={() => window.open('https://www.instagram.com/denzdelvillar')}>Instagram↗</a>, <a className="link" onClick={() => window.open('https://www.twitter.com/denzvryan')}>Twitter↗</a>, and <a className="link" onClick={() => window.open('https://www.linkedin.com/in/denzdelvillar')}>LinkedIn↗</a>.
     </div>
     );
   };
