@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import ".././App.css"
+import denz from ".././denz.jpg"
 
 const Home = () => {
     return (
-      <div className="about">
+      <section className="about">
     
     <h2>My Philippines Travel Level</h2>
 
@@ -26,12 +27,13 @@ const Home = () => {
 
     <br></br>
     <br></br>
-    <div className="asterisk">*Technically, there are only 82 provinces. Metro Manila is an administrative region.</div>
+    <section className="asterisk">*Technically, there are only 82 provinces. Metro Manila is an administrative region.</section>
 
     <h2>About Me</h2>
 
-    Hi! My name is Denz and I am a Filipino software engineer based in Singapore. My Philippines travel level is embarrassingly 62.
+    <img className="dp" src={denz} alt="me" />
 
+    Hello there! My name is Denz and I am a Filipino software engineer currently based in Singapore. Embarrassingly, my Philippines travel level is only 62.
     <br></br>
     <br></br>
     
@@ -40,8 +42,14 @@ const Home = () => {
     <br></br>
     <br></br>
 
-    Check out my <a className="link" onClick={() => window.open('https://www.instagram.com/denzdelvillar')}>Instagram↗</a>, <a className="link" onClick={() => window.open('https://www.twitter.com/denzvryan')}>Twitter↗</a>, and <a className="link" onClick={() => window.open('https://www.linkedin.com/in/denzdelvillar')}>LinkedIn↗</a>.
-    </div>
+    Check out my socials: 
+    <br></br>
+    <a className="link" onClick={() => window.open('https://www.instagram.com/denzdelvillar')}>Instagram↗</a>
+    <br></br>
+    <a className="link" onClick={() => window.open('https://www.twitter.com/denzvryan')}>Twitter↗</a>
+    <br></br>
+    <a className="link" onClick={() => window.open('https://www.linkedin.com/in/denzdelvillar')}>LinkedIn↗</a>.
+    </section>
     );
   };
   

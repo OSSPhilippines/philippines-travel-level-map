@@ -26,15 +26,15 @@ function MapPage() {
     }, [divRef]);
 
     return (
-        <div>
-            <div className="Map-container">
-                <div className="Map-padding" ref={divRef}>
+        <section>
+            <section className="Map-container">
+                <section className="Map-padding" ref={divRef}>
                     <Map/>
-                </div>
-                <div className="save-image-button" onClick={downloadJpg}>Save Image</div>
-            </div>
+                </section>
+                <section className="save-image-button" onClick={downloadJpg}>Save Image</section>
+            </section>
         <AdsComponent dataAdSlot='8658257981' /> 
-        </div>
+        </section>
     );
 };
 

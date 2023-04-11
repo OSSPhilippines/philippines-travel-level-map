@@ -3,7 +3,7 @@ import ".././App.css"
 
 const Layout = () => {
   return (
-    <div className="nav">
+    <section className="nav">
       <nav className="nav">
         <ul  className="nav-ul">
           <li className="nav">
@@ -13,7 +13,7 @@ const Layout = () => {
       </nav>
 
       <Outlet />
-    </div>
+    </section>
   )
 };
 

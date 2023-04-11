@@ -2,6 +2,10 @@
   background-color: #9dc3fb;
 }
 
+body {
+  background-color: #9dc3fb;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -131,7 +135,8 @@
 .about {
   padding-left: 20px;
   padding-right: 20px;
-  height: 100vh;
+  padding-bottom: 20px;
+height: 100h;
 }
 
 .nav {
@@ -158,6 +163,16 @@
 .asterisk {
   font-size: 12px;
 }
+
+.dp {
+  width: 100px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 10px;
+  float: left;
+  margin-right: 10px;
+}
+
 
 
 @keyframes App-logo-spin {
