@@ -2,10 +2,6 @@
   background-color: #9dc3fb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -131,6 +127,37 @@
   cursor: pointer;
   background-color: lightgray;
 }
+
+.about {
+  padding: 20px;
+  height: 100vh;
+}
+
+.nav {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+
+  padding-top: 10px;
+}
+
+.nav-ul {
+  padding-left: 20px;
+  padding-bottom: 0px;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.link {
+  color: blue;
+}
+
+.asterisk {
+  font-size: 12px;
+}
+
 
 @keyframes App-logo-spin {
   from {

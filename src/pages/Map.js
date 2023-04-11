@@ -1,6 +1,6 @@
 import React, { useState }  from 'react';
-import PhilippinesMapJSX from './PhilippinesMapJSX';
-import "./App.css"
+import PhilippinesMapJSX from '../PhilippinesMapJSX';
+import ".././App.css"
 
 const PhilippinesMap = () => {
   const [provinceLevels] = useState([]);
