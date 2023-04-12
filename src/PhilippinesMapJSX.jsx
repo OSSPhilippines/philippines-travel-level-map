@@ -1863,7 +1863,7 @@ const PhilippinesMapJSX = ({setSelectedProvince, setMenuPosition, setMenuVisible
             strokeWidth="0.75"
             fontSize="16"
           >
-            Visited there
+            Lived there
           </tspan>
         </text>
         <text
