@@ -178,6 +178,10 @@ height: 100h;
  text-align: center;
 }
 
+.bullet {
+  list-style-type:circle;
+}
+
 
 @keyframes App-logo-spin {
   from {

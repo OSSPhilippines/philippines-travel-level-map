@@ -18,6 +18,22 @@ const Home = () => {
 
     <h2>How To Use</h2>
     The map is divided into the 83* Philippine provinces. All you have to do is to click on a province and choose the appropriate level of travel. 
+
+    <br></br>
+    <br></br>
+    
+    Here's what each level represents:
+    <br></br>
+    <br></br>
+    <li className="bullet"><b>Lived there</b> - you spent a significant portion of your life in that area.</li> 
+    <li className="bullet"><b>Stayed there</b> - you slept at least a night in that area.</li> 
+    <li className="bullet"><b>Visited there</b> - you spent some hours exploring the area.</li> 
+    <li className="bullet"><b>Alighted there</b> - you just dropped off for a short stopover, layover, or transfer.</li> 
+    <li className="bullet"><b>Passed there</b> - you passed by that area but did not set foot.</li> 
+    <li className="bullet"><b>Never been there</b> - you need to travel there soon.</li> 
+    
+    <br></br>
+
     Your total score will be updated accordingly. You can then save the image and share on your social media.
     
     <br></br>
