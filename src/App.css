@@ -182,6 +182,17 @@ height: 100h;
   list-style-type:circle;
 }
 
+.map-tooltip {
+  position: absolute;
+  background: #fff;
+  padding: .5rem .875rem;
+  border-radius: 0.5rem;
+  font-weight: 900;
+  font-size: .875rem;
+  pointer-events: none;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
 
 @keyframes App-logo-spin {
   from {
