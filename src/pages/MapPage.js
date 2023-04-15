@@ -1,8 +1,6 @@
-import React, { useCallback, useRef } from "react";
-import { toJpeg } from 'html-to-image'
 import AdsComponent from ".././AdsComponent";
-import Map from "./Map"
-import ".././App.css"
+import Map from "./Map";
+import ".././App.css";
 
 function MapPage({ divRef }) {
 
