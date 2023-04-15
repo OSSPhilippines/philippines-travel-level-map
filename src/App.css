@@ -1,87 +1,88 @@
 .App {
-  background-color: #9dc3fb;
+	background-color: #9dc3fb;
+	max-width: 1024px;
+	margin: 0 auto;
 }
 
 body {
-  background-color: #9dc3fb;
+	background-color: #9dc3fb;
 }
 
-
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 .Map-container {
-  background-color: #9dc3fb;
-  width: 100dvw;
-  height: 100dvh;
- display: table-cell;
+	background-color: #9dc3fb;
+	width: 100dvw;
+	height: 100dvh;
+	display: table-cell;
 }
 
 .Map-padding {
-  background-color: #9dc3fb;
-  padding-top: 20px;
-  padding-bottom: 20;
+	background-color: #9dc3fb;
+	padding-top: 20px;
+	padding-bottom: 20;
 }
 
 .province-layer:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .level-menu {
-    background-color: white;
-    width: 200px;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 10px;
-    border-color: black;
-    text-indent: 10px;
-    z-index: 1000;
+	background-color: white;
+	width: 200px;
+	border-style: solid;
+	border-width: thin;
+	border-radius: 10px;
+	border-color: black;
+	text-indent: 10px;
+	z-index: 1000;
 }
 
 .level-5:hover {
-  cursor: pointer;
-  background-color: #e84c3d;
+	cursor: pointer;
+	background-color: #e84c3d;
 }
 
 .level-4:hover {
-  cursor: pointer;
-  background-color: #d58337;
+	cursor: pointer;
+	background-color: #d58337;
 }
 
 .level-3:hover {
-  cursor: pointer;
-  background-color: #f3c218;
+	cursor: pointer;
+	background-color: #f3c218;
 }
 
 .level-2:hover {
-  cursor: pointer;
-  background-color: #30cc70;
+	cursor: pointer;
+	background-color: #30cc70;
 }
 
 .menu-header {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .menu-header:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .menu-header,
@@ -90,115 +91,115 @@ body {
 .level-3,
 .level-2,
 .level-1 {
-  display: flex;
-  min-height: 25px;
-  align-items:center;
+	display: flex;
+	min-height: 25px;
+	align-items: center;
 }
 
 .level-1:hover {
-  cursor: pointer;
-  background-color: #3598db;
+	cursor: pointer;
+	background-color: #3598db;
 }
 
 .level-0 {
-  display: flex;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  min-height: 25px;
-  align-items:center;
+	display: flex;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	min-height: 25px;
+	align-items: center;
 }
 
 .level-0:hover {
-  cursor: pointer;
-  background-color: lightgray;
+	cursor: pointer;
+	background-color: lightgray;
 }
 
 .save-image-button {
-  position: relative;
-  background-color: white;
-  border-radius: 10px;
-  min-height: 30px;
-  align-items: center;
-  display: flex;
-  width: 100px;
-  justify-content: center;
-  left: 50%;
-  margin-left: -50px;
-  margin-bottom: 20px;
+	position: relative;
+	background-color: white;
+	border-radius: 10px;
+	min-height: 30px;
+	align-items: center;
+	display: flex;
+	width: 100px;
+	justify-content: center;
+	left: 50%;
+	margin-left: -50px;
+	margin-bottom: 20px;
 }
 
 .save-image-button:hover {
-  cursor: pointer;
-  background-color: lightgray;
+	cursor: pointer;
+	background-color: lightgray;
 }
 
 .about {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-height: 100h;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	height: 100h;
 }
 
 .nav {
-  list-style-type: none;
-  text-decoration: none;
-  color: black;
+	list-style-type: none;
+	text-decoration: none;
+	color: black;
 
-  padding-top: 10px;
+	padding-top: 10px;
 }
 
 .nav-ul {
-  padding-left: 20px;
-  padding-bottom: 0px;
+	padding-left: 20px;
+	padding-bottom: 0px;
 }
 
 .link:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .link {
-  color: blue;
-  display: inline;
+	color: blue;
+	display: inline;
 }
 
 .asterisk {
-  font-size: 12px;
+	font-size: 12px;
 }
 
 .dp {
-  width: 100px;
-  border-color: white;
-  border-style: solid;
-  border-radius: 10px;
-  float: left;
-  margin-right: 10px;
+	width: 100px;
+	border-color: white;
+	border-style: solid;
+	border-radius: 10px;
+	float: left;
+	margin-right: 10px;
 }
 
 .flag-counter {
- text-align: center;
+	text-align: center;
 }
 
 .bullet {
-  list-style-type:circle;
+	list-style-type: circle;
 }
 
 .map-tooltip {
-  position: absolute;
-  background: #fff;
-  padding: .5rem .875rem;
-  border-radius: 0.5rem;
-  font-weight: 900;
-  font-size: .875rem;
-  pointer-events: none;
-  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+	position: absolute;
+	background: #fff;
+	padding: 0.5rem 0.875rem;
+	border-radius: 0.5rem;
+	font-weight: 900;
+	font-size: 0.875rem;
+	pointer-events: none;
+	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+		drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 
-
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
