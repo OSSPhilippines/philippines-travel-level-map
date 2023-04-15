@@ -1,16 +1,12 @@
 import React, { useCallback, useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { toJpeg } from "html-to-image";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import MapPage from "./pages/MapPage";
 import NoPage from "./pages/NoPage";
-import { toJpeg } from "html-to-image";
-import './App.css'
-
-
 
 function App() {
-
   const divRef = useRef(null);
 
   const fileName = "phMap.jpg";
@@ -31,10 +27,12 @@ function App() {
       });
   }, [divRef]);
 
+
   return (
     <div className="App">
       <BrowserRouter>
         <Layout downloadJpg={downloadJpg} />
+
         <Routes>
           <Route index element={<Home />} />
           <Route
