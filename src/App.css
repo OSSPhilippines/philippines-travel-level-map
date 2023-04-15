@@ -4,13 +4,21 @@
 
 body {
   background-color: #9dc3fb;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+  color: rgba(0, 0, 0, 0.566);
 }
 
 .App-header {
@@ -28,32 +36,19 @@ body {
   color: #61dafb;
 }
 
-.Map-container {
-  background-color: #9dc3fb;
-  width: 100dvw;
-  height: 100dvh;
- display: table-cell;
-}
-
-.Map-padding {
-  background-color: #9dc3fb;
-  padding-top: 20px;
-  padding-bottom: 20;
-}
-
 .province-layer:hover {
   cursor: pointer;
 }
 
 .level-menu {
-    background-color: white;
-    width: 200px;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 10px;
-    border-color: black;
-    text-indent: 10px;
-    z-index: 1000;
+  background-color: white;
+  width: 200px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 10px;
+  border-color: black;
+  text-indent: 10px;
+  z-index: 1000;
 }
 
 .level-5:hover {
@@ -92,7 +87,7 @@ body {
 .level-1 {
   display: flex;
   min-height: 25px;
-  align-items:center;
+  align-items: center;
 }
 
 .level-1:hover {
@@ -105,7 +100,7 @@ body {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   min-height: 25px;
-  align-items:center;
+  align-items: center;
 }
 
 .level-0:hover {
@@ -114,17 +109,10 @@ body {
 }
 
 .save-image-button {
-  position: relative;
-  background-color: white;
-  border-radius: 10px;
-  min-height: 30px;
-  align-items: center;
-  display: flex;
-  width: 100px;
-  justify-content: center;
-  left: 50%;
-  margin-left: -50px;
-  margin-bottom: 20px;
+  padding: 10px 15px;
+  background: white;
+  border: none;
+  border-radius: 20px;
 }
 
 .save-image-button:hover {
@@ -132,24 +120,21 @@ body {
   background-color: lightgray;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  height: 64px;
+  background-color: transparent;
+  align-items: center;
+  padding: 10px 40px;
+}
+
 .about {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-height: 100h;
-}
-
-.nav {
-  list-style-type: none;
-  text-decoration: none;
-  color: black;
-
-  padding-top: 10px;
-}
-
-.nav-ul {
-  padding-left: 20px;
-  padding-bottom: 0px;
+  height: 100h;
 }
 
 .link:hover {
@@ -175,24 +160,30 @@ height: 100h;
 }
 
 .flag-counter {
- text-align: center;
+  text-align: center;
 }
 
 .bullet {
-  list-style-type:circle;
+  list-style-type: circle;
 }
 
 .map-tooltip {
   position: absolute;
   background: #fff;
-  padding: .5rem .875rem;
+  padding: 0.5rem 0.875rem;
   border-radius: 0.5rem;
   font-weight: 900;
-  font-size: .875rem;
+  font-size: 0.875rem;
   pointer-events: none;
-  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
 
 @keyframes App-logo-spin {
   from {

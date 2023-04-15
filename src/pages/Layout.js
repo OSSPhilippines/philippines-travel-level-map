@@ -1,17 +1,19 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import ".././App.css"
 
-const Layout = () => {
+const Layout = ({ downloadJpg }) => {
+  const location = useLocation();
+  // Hide the "Save Image" button when the current route is "/"
+  const showSaveButton = location.pathname !== "/";
+
   return (
     <section className="nav">
-      <nav className="nav">
-        <ul  className="nav-ul">
-          <li className="nav">
-            <Link className="nav" to="/">Home</Link>
-          </li>
-        </ul>
+      <nav className="container">
+        <Link className="home" to="/">Home</Link>
       </nav>
-
+      {showSaveButton && (
+        <button className="save-image-button" onClick={downloadJpg}>Save Image</button>
+      )}
       <Outlet />
     </section>
   )
