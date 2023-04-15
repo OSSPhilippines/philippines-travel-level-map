@@ -128,11 +128,12 @@ img {
 
 .socials {
   margin-top: 1.4rem;
-  cursor: pointer;
 }
 
-.socials svg {
+.socials svg,
+.github {
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 .reminder {
@@ -251,10 +252,6 @@ img {
   background-color: transparent;
   align-items: center;
   padding: 10px;
-}
-
-.link:hover {
-  cursor: pointer;
 }
 
 .link {

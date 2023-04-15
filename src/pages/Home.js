@@ -10,11 +10,10 @@ const Home = () => {
         <h1>My Philippines Travel Level</h1>
         <p> This simple web app helps you visualize how well-travelled you are in the Philippines. This project was inspired by the <a className="link" href="https://zhung.com.tw/japanex/">JapanEx</a>.</p>
 
-        <div className="link" onClick={() => window.open('https://github.com/denzdelvillar/philippine-map-app')}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 26">
-            <path d="M12 .3C5.7.3.3 5.7.3 12c0 5.3 3.4 9.8 8.1 11.4.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.4.9.1-.7.4-1.2.8-1.5-3-.3-6.2-1.5-6.2-6.7 0-1.5.5-2.8 1.2-3.8-.1-.3-.5-1.8.1-3.8 0 0 1.2-.4 3.9 1.5 1.1-.3 2.3-.5 3.5-.5s2.4.2 3.5.5c2.7-1.9 3.9-1.5 3.9-1.5.6 2 .2 3.5.1 3.8.7 1 1.2 2.3 1.2 3.8 0 5.2-3.2 6.4-6.2 6.7.5.4.9 1.2.9 2.5v3.7c0 .3.2.7.8.6 4.7-1.6 8.1-6.1 8.1-11.4C23.7 5.7 18.3.3 12 .3z" />
-          </svg>
-        </div>
+        <svg className="github" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 26" onClick={() => window.open('https://github.com/denzdelvillar/philippine-map-app')}>
+          <path d="M12 .3C5.7.3.3 5.7.3 12c0 5.3 3.4 9.8 8.1 11.4.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.4.9.1-.7.4-1.2.8-1.5-3-.3-6.2-1.5-6.2-6.7 0-1.5.5-2.8 1.2-3.8-.1-.3-.5-1.8.1-3.8 0 0 1.2-.4 3.9 1.5 1.1-.3 2.3-.5 3.5-.5s2.4.2 3.5.5c2.7-1.9 3.9-1.5 3.9-1.5.6 2 .2 3.5.1 3.8.7 1 1.2 2.3 1.2 3.8 0 5.2-3.2 6.4-6.2 6.7.5.4.9 1.2.9 2.5v3.7c0 .3.2.7.8.6 4.7-1.6 8.1-6.1 8.1-11.4C23.7 5.7 18.3.3 12 .3z" />
+        </svg>
+
         <Link className="viewMap" to={"/map"}>View Map ↗</Link>
       </section>
 
