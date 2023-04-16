@@ -45,6 +45,8 @@ const Home = () => {
     <br></br>
     <section className="asterisk">*Technically, there are only 82 provinces. Metro Manila is an administrative region.</section>
 
+    <div id="ezoic-pub-ad-placeholder-104"> </div>
+
     <h2>About Me</h2>
 
     <img className="dp" src={denz} alt="me" />
@@ -68,6 +70,8 @@ const Home = () => {
     
     <br></br>
     <br></br>
+
+    <div id="ezoic-pub-ad-placeholder-102"> </div>
 
     <div className="flag-counter">
     <a  href="https://info.flagcounter.com/s6dX"><img src="https://s11.flagcounter.com/count2/s6dX/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"/></a>
