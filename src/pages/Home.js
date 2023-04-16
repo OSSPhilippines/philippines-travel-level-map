@@ -8,6 +8,8 @@ const Home = () => {
     
     <h2>My Philippines Travel Level</h2>
 
+    <div id="ezoic-pub-ad-placeholder-106"> </div>
+
     This simple web app helps you visualize how well-travelled you are in the Philippines. 
 
     <br></br>
@@ -21,6 +23,8 @@ const Home = () => {
 
     <br></br>
     <br></br>
+
+    <div id="ezoic-pub-ad-placeholder-108"> </div>
     
     Here's what each level represents:
     <br></br>
@@ -34,10 +38,14 @@ const Home = () => {
     
     <br></br>
 
+    <div id="ezoic-pub-ad-placeholder-109"> </div>
+
     Your total score will be updated accordingly. You can then save the image and share on your social media.
     
     <br></br>
     <br></br>
+
+    <div id="ezoic-pub-ad-placeholder-107"> </div>
 
     Click <Link className="link" to={"/map"}>here</Link> to view the map. Enjoy!
 
@@ -59,6 +67,8 @@ const Home = () => {
     
     <br></br>
     <br></br>
+
+    <div id="ezoic-pub-ad-placeholder-111"> </div>
 
     Check out my socials: 
     <br></br>

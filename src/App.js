@@ -9,6 +9,7 @@ import NoPage from "./pages/NoPage";
 function App() {
   return (
     <div className="App">
+      <div id="ezoic-pub-ad-placeholder-110"> </div>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>

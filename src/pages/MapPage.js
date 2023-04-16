@@ -26,6 +26,7 @@ function MapPage() {
 
     return (
         <section>
+            <div id="ezoic-pub-ad-placeholder-105"> </div>
             <section className="Map-container">
                 <section className="Map-padding" ref={divRef}>
                     <Map/>
