@@ -47,11 +47,11 @@ const PhilippinesMap = () => {
       const newLevel = event.target.getAttribute('level');
 
       const index = parseInt(selectedProvinceIndex);
-      setProvinceLevels((prevState) =>
-        prevState.map((provLevel, i) =>
-          i === index ? parseInt(newLevel) : provLevel
-        )
-      );
+      setProvinceLevels((prevProvinceLevels) => {
+        const clonePrevLevels = [...prevProvinceLevels];
+        clonePrevLevels[index] = parseInt(newLevel);
+        return clonePrevLevels;
+      });
 
       setMenuVisible(false);
     },

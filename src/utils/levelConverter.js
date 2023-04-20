@@ -1,7 +1,7 @@
 const levelStringToArray = (levelStr) => {
   const levelRegex = /^[0-5]+$/;
   if (levelStr.length !== 83 || !levelStr.match(levelRegex)) {
-    console.warn('Levels parameter is invalid');
+    console.warn('Levels URL parameter is invalid');
     return new Array(83).fill(0);
   }
 

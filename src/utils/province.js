@@ -1,3 +1,4 @@
+// The order of this array is strictly important as it's used in encoding/decoding URL
 const provinces = [
   {
     id: 'Aurora',
