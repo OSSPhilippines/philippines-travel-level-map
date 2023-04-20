@@ -502,4 +502,22 @@ const provinces = [
   },
 ];
 
-export { provinces };
+const provinceLevelFills = [
+  'white',
+  '#3598db',
+  '#30cc70',
+  '#f3c218',
+  '#d58337',
+  '#e84c3d',
+];
+
+const menuOptions = [
+  { label: 'Lived there', level: 5, fill: '#e84c3d' },
+  { label: 'Stayed there', level: 4, fill: '#d58337' },
+  { label: 'Visited there', level: 3, fill: '#f3c218' },
+  { label: 'Alighted there', level: 2, fill: '#30cc70' },
+  { label: 'Passed there', level: 1, fill: '#3598db' },
+  { label: 'Never been there', level: 0, fill: 'white' },
+];
+
+export { provinces, provinceLevelFills, menuOptions };

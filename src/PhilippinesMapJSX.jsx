@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { provinces } from "./utils/province";
+import { provinces, provinceLevelFills } from "./utils/province";
+
 
 const MapTooltip = ({ visible, position, content }) => {
   if (!visible) return null;
@@ -13,10 +14,10 @@ const MapTooltip = ({ visible, position, content }) => {
 };
 
 const PhilippinesMapJSX = ({
-  setSelectedProvince,
+  provinceLevels,
+  setSelectedProvinceIndex,
   setMenuPosition,
   setMenuVisible,
-  setSelectedProvinceLayer,
   totalLevel,
 }) => {
   const [tooltipVisible, setTooltipVisible] = useState(false);
@@ -32,8 +33,7 @@ const PhilippinesMapJSX = ({
       event.target.getBoundingClientRect().x + 200 - window.innerWidth < 0
         ? 0
         : event.target.getBoundingClientRect().x + 200 - window.innerWidth;
-    setSelectedProvince(event.target.getAttribute("id"));
-    setSelectedProvinceLayer(event.target);
+    setSelectedProvinceIndex(event.target.getAttribute("index"));
     setMenuPosition({
       x: event.target.getBoundingClientRect().x + window.pageXOffset - offsetX,
       y: event.target.getBoundingClientRect().y + window.pageYOffset - offsetY,
@@ -86,7 +86,7 @@ const PhilippinesMapJSX = ({
           ></path>
         </g>
 
-        {provinces.map((province) =>
+        {provinces.map((province, provIndex) =>
           <g
             className="province-layer"
             id={province.id}
@@ -94,7 +94,8 @@ const PhilippinesMapJSX = ({
           >
             <path
               id={province.id}
-              fill="#fff"
+              index={provIndex}
+              fill={provinceLevelFills[provinceLevels[provIndex]] ?? "#fff"}
               fillRule="nonzero"
               stroke="#000"
               strokeDasharray="none"
