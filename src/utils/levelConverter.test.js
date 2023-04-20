@@ -1,14 +1,9 @@
 import { levelStringToArray, levelArrayToString } from './levelConverter';
 import { PROVINCES_LENGTH } from './constants';
 
-const levelArr = [
-  1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1,
-  2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2,
-  3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3,
-  4, 5, 1, 2, 3,
-];
-const levelStr =
-  '12345123451234512345123451234512345123451234512345123451234512345123451234512345123';
+let levelArr = new Array(PROVINCES_LENGTH).fill(0);
+levelArr = levelArr.map((_) => Math.floor(Math.random() * 6));
+const levelStr = levelArr.join('');
 
 describe('levelStringToArray', () => {
   test('should properly convert string to array of province levels', () => {
