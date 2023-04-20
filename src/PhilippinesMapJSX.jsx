@@ -42,7 +42,6 @@ const PhilippinesMapJSX = ({
   };
 
   const handleMouseEnter = (event) => {
-    event.target.setAttribute("fill", "#CCCCCC");
     const targetElement = event.target.parentNode;
     const position = targetElement.getBoundingClientRect();
     setTooltipPosition({
@@ -55,7 +54,6 @@ const PhilippinesMapJSX = ({
   };
 
   const handleMouseLeave = (event) => {
-    event.target.setAttribute("fill", "#fff");
     setTooltipVisible(false);
   };
 

@@ -6,7 +6,6 @@ body {
   background-color: #9dc3fb;
 }
 
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -32,7 +31,7 @@ body {
   background-color: #9dc3fb;
   width: 100dvw;
   height: 100dvh;
- display: table-cell;
+  display: table-cell;
 }
 
 .Map-padding {
@@ -45,15 +44,19 @@ body {
   cursor: pointer;
 }
 
+svg#svg574 .province-layer path:hover {
+  fill: #cccccc;
+}
+
 .level-menu {
-    background-color: white;
-    width: 200px;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 10px;
-    border-color: black;
-    text-indent: 10px;
-    z-index: 1000;
+  background-color: white;
+  width: 200px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 10px;
+  border-color: black;
+  text-indent: 10px;
+  z-index: 1000;
 }
 
 .level-5:hover {
@@ -92,7 +95,7 @@ body {
 .level-1 {
   display: flex;
   min-height: 25px;
-  align-items:center;
+  align-items: center;
 }
 
 .level-1:hover {
@@ -105,7 +108,7 @@ body {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   min-height: 25px;
-  align-items:center;
+  align-items: center;
 }
 
 .level-0:hover {
@@ -136,7 +139,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-height: 100h;
+  height: 100h;
 }
 
 .nav {
@@ -175,22 +178,23 @@ height: 100h;
 }
 
 .flag-counter {
- text-align: center;
+  text-align: center;
 }
 
 .bullet {
-  list-style-type:circle;
+  list-style-type: circle;
 }
 
 .map-tooltip {
   position: absolute;
   background: #fff;
-  padding: .5rem .875rem;
+  padding: 0.5rem 0.875rem;
   border-radius: 0.5rem;
   font-weight: 900;
-  font-size: .875rem;
+  font-size: 0.875rem;
   pointer-events: none;
-  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 
 .donate {
@@ -202,7 +206,6 @@ height: 100h;
 .donate-button {
   text-align: center;
 }
-
 
 @keyframes App-logo-spin {
   from {
