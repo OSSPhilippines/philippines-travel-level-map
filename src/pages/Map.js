@@ -2,7 +2,7 @@ import React, { useMemo, useState, useEffect, useCallback } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 
 import PhilippinesMapJSX from '../PhilippinesMapJSX';
-import { provinces, menuOptions } from '../utils/province';
+import { PROVINCES, MENU_OPTIONS, PROVINCES_LENGTH } from '../utils/constants';
 import '.././App.css';
 import {
   levelArrayToString,
@@ -13,13 +13,15 @@ const PhilippinesMap = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
-  const [provinceLevels, setProvinceLevels] = useState(new Array(83).fill(0));
+  const [provinceLevels, setProvinceLevels] = useState(
+    new Array(PROVINCES_LENGTH).fill(0)
+  );
   const [selectedProvinceIndex, setSelectedProvinceIndex] = useState(0);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   const [menuVisible, setMenuVisible] = useState(false);
 
   const selectedProvinceName = useMemo(() => {
-    return provinces[selectedProvinceIndex]?.id ?? '';
+    return PROVINCES[selectedProvinceIndex]?.id ?? '';
   }, [selectedProvinceIndex]);
 
   const totalLevel = useMemo(() => {
@@ -79,7 +81,7 @@ const PhilippinesMap = () => {
             <div className='menu-header' onClick={() => window.open(searchUrl)}>
               {selectedProvinceName} ↗{' '}
             </div>
-            {menuOptions.map(({ label, level }) => (
+            {MENU_OPTIONS.map(({ label, level }) => (
               <div
                 key={level}
                 level={level}

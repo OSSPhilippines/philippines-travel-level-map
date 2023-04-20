@@ -1,5 +1,23 @@
+const PROVINCE_LEVEL_FILLS = [
+  'white',
+  '#3598db',
+  '#30cc70',
+  '#f3c218',
+  '#d58337',
+  '#e84c3d',
+];
+
+const MENU_OPTIONS = [
+  { label: 'Lived there', level: 5, fill: '#e84c3d' },
+  { label: 'Stayed there', level: 4, fill: '#d58337' },
+  { label: 'Visited there', level: 3, fill: '#f3c218' },
+  { label: 'Alighted there', level: 2, fill: '#30cc70' },
+  { label: 'Passed there', level: 1, fill: '#3598db' },
+  { label: 'Never been there', level: 0, fill: 'white' },
+];
+
 // The order of this array is strictly important as it's used in encoding/decoding URL
-const provinces = [
+const PROVINCES = [
   {
     id: 'Aurora',
     transform: 'translate(427.5 375)',
@@ -503,22 +521,6 @@ const provinces = [
   },
 ];
 
-const provinceLevelFills = [
-  'white',
-  '#3598db',
-  '#30cc70',
-  '#f3c218',
-  '#d58337',
-  '#e84c3d',
-];
+const PROVINCES_LENGTH = PROVINCES.length;
 
-const menuOptions = [
-  { label: 'Lived there', level: 5, fill: '#e84c3d' },
-  { label: 'Stayed there', level: 4, fill: '#d58337' },
-  { label: 'Visited there', level: 3, fill: '#f3c218' },
-  { label: 'Alighted there', level: 2, fill: '#30cc70' },
-  { label: 'Passed there', level: 1, fill: '#3598db' },
-  { label: 'Never been there', level: 0, fill: 'white' },
-];
-
-export { provinces, provinceLevelFills, menuOptions };
+export { PROVINCES, PROVINCE_LEVEL_FILLS, PROVINCES_LENGTH, MENU_OPTIONS };

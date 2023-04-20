@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { provinces, provinceLevelFills } from "./utils/province";
+import { PROVINCES, PROVINCE_LEVEL_FILLS } from "./utils/constants";
 
 
 const MapTooltip = ({ visible, position, content }) => {
@@ -86,7 +86,7 @@ const PhilippinesMapJSX = ({
           ></path>
         </g>
 
-        {provinces.map((province, provIndex) =>
+        {PROVINCES.map((province, provIndex) =>
           <g
             className="province-layer"
             id={province.id}
@@ -95,7 +95,7 @@ const PhilippinesMapJSX = ({
             <path
               id={province.id}
               index={provIndex}
-              fill={provinceLevelFills[provinceLevels[provIndex]] ?? "#fff"}
+              fill={PROVINCE_LEVEL_FILLS[provinceLevels[provIndex]] ?? "#fff"}
               fillRule="nonzero"
               stroke="#000"
               strokeDasharray="none"

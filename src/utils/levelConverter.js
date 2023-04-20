@@ -1,8 +1,9 @@
+import { PROVINCES_LENGTH } from './constants';
+
 const levelStringToArray = (levelStr) => {
   const levelRegex = /^[0-5]+$/;
-  if (levelStr.length !== 83 || !levelStr.match(levelRegex)) {
-    console.warn('Levels URL parameter is invalid');
-    return new Array(83).fill(0);
+  if (levelStr.length !== PROVINCES_LENGTH || !levelStr.match(levelRegex)) {
+    return new Array(PROVINCES_LENGTH).fill(0);
   }
 
   const arr = levelStr.split('');
@@ -10,9 +11,8 @@ const levelStringToArray = (levelStr) => {
 };
 
 const levelArrayToString = (levelArr) => {
-  if (levelArr.length !== 83) {
-    console.warn('Levels array is invalid');
-    return new Array(83).fill('0').join('');
+  if (levelArr.length !== PROVINCES_LENGTH) {
+    return new Array(PROVINCES_LENGTH).fill('0').join('');
   }
 
   return levelArr.join('');
