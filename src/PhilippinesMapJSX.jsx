@@ -88,6 +88,7 @@ const PhilippinesMapJSX = ({
 
         {PROVINCES.map((province, provIndex) =>
           <g
+            key={province.id}
             className="province-layer"
             id={province.id}
             transform={province.transform}

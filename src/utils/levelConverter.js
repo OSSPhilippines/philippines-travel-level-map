@@ -1,12 +1,16 @@
 import { PROVINCES_LENGTH } from './constants';
 
 const levelStringToArray = (levelStr) => {
+  const levelString = levelStr ?? '';
   const levelRegex = /^[0-5]+$/;
-  if (levelStr.length !== PROVINCES_LENGTH || !levelStr.match(levelRegex)) {
+  if (
+    levelString.length !== PROVINCES_LENGTH ||
+    !levelString.match(levelRegex)
+  ) {
     return new Array(PROVINCES_LENGTH).fill(0);
   }
 
-  const arr = levelStr.split('');
+  const arr = levelString.split('');
   return arr.map((provinceLevel) => parseInt(provinceLevel));
 };
 
