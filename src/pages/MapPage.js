@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { toJpeg } from 'html-to-image'
 
 import Map from "./Map"
+import FacebookLogo from '../components/FacebookLogo'
 import { FB_SHARE_URL } from '../utils/constants'
 import ".././App.css"
 
@@ -42,7 +43,8 @@ function MapPage() {
                 </section>
                 <section className="save-image-button" onClick={downloadJpg}>Save Image</section>
                 <section className='share-fb-button' onClick={handleFacebookShare}>
-                  Share to Facebook
+                  <FacebookLogo />
+                  Share
                 </section>
             </section>
 
