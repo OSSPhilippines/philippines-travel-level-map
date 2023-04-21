@@ -116,12 +116,13 @@ svg#svg574 .province-layer path:hover {
   background-color: lightgray;
 }
 
-.save-image-button {
+.save-image-button, .share-fb-button {
   position: relative;
   background-color: white;
   border-radius: 10px;
   min-height: 30px;
   align-items: center;
+  text-align: center;
   display: flex;
   width: 100px;
   justify-content: center;
@@ -130,7 +131,7 @@ svg#svg574 .province-layer path:hover {
   margin-bottom: 20px;
 }
 
-.save-image-button:hover {
+.save-image-button:hover, .share-fb-button:hover {
   cursor: pointer;
   background-color: lightgray;
 }

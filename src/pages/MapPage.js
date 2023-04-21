@@ -1,10 +1,14 @@
 import React, {  useCallback, useRef } from "react";
+import { useLocation } from 'react-router-dom';
 import { toJpeg } from 'html-to-image'
+
 import Map from "./Map"
+import { FB_SHARE_URL } from '../utils/constants'
 import ".././App.css"
 
 function MapPage() {
     const divRef = useRef(null);
+    const location = useLocation();
   
     const fileName = 'phMap.jpg'
   
@@ -24,6 +28,11 @@ function MapPage() {
         })
     }, [divRef]);
 
+    const handleFacebookShare = useCallback(() => {
+      const navUrl = FB_SHARE_URL + window.location.href;
+      window.open(navUrl, 'mywindow', 'width=350,height=250');
+    }, [location.search]);
+
     return (
         <section>
             <div id="ezoic-pub-ad-placeholder-105"> </div>
@@ -32,6 +41,9 @@ function MapPage() {
                     <Map/>
                 </section>
                 <section className="save-image-button" onClick={downloadJpg}>Save Image</section>
+                <section className='share-fb-button' onClick={handleFacebookShare}>
+                  Share to Facebook
+                </section>
             </section>
 
     <section className="donate">
