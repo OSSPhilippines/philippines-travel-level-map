@@ -1,50 +1,72 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState, useEffect, useCallback } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
+
 import PhilippinesMapJSX from '../PhilippinesMapJSX';
-import ".././App.css";
+import { PROVINCES, MENU_OPTIONS, PROVINCES_LENGTH } from '../utils/constants';
+import '.././App.css';
+import {
+  levelArrayToString,
+  levelStringToArray,
+} from '../utils/levelConverter';
 
 const PhilippinesMap = () => {
-  const [provinceLevels] = useState([]);
-  const [selectedProvince, setSelectedProvince] = useState(null);
-  const [selectedProvinceLayer, setSelectedProvinceLayer] = useState(null);
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  const [provinceLevels, setProvinceLevels] = useState(
+    new Array(PROVINCES_LENGTH).fill(0)
+  );
+  const [selectedProvinceIndex, setSelectedProvinceIndex] = useState(0);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   const [menuVisible, setMenuVisible] = useState(false);
-  const [totalLevel, setTotalLevel] = useState(0);
 
-  const searchUrl = 'http://www.google.com/search?q="' + selectedProvince + ', Philippines"';
+  const selectedProvinceName = useMemo(() => {
+    return PROVINCES[selectedProvinceIndex]?.id ?? '';
+  }, [selectedProvinceIndex]);
 
-  const menuOptions = [
-    { label: 'Lived there', level: 5, fill: '#e84c3d' },
-    { label: 'Stayed there', level: 4, fill: '#d58337' },
-    { label: 'Visited there', level: 3, fill: '#f3c218' },
-    { label: 'Alighted there', level: 2, fill: '#30cc70' },
-    { label: 'Passed there', level: 1, fill: '#3598db' },
-    { label: 'Never been there', level: 0, fill: 'white' },
-  ];
+  const totalLevel = useMemo(() => {
+    return provinceLevels.reduce((a, v) => a + v, 0);
+  }, [provinceLevels]);
 
-  const handleLevelClick = (selectedProvince, selectedProvinceLayer, event) => {
-    const newLevel = parseInt(event.target.getAttribute('level'));
-    const provinceIndex = provinceLevels
-      .findIndex((province) => province.id === selectedProvince);
-    if (provinceIndex !== -1) {
-      provinceLevels[provinceIndex].level = newLevel;
-    } else {
-      provinceLevels.push({ id: selectedProvince, level: newLevel });
-    }
+  const searchUrl =
+    'http://www.google.com/search?q="' +
+    selectedProvinceName +
+    ', Philippines"';
 
-    const fill = menuOptions.find((option) => option.level === newLevel)?.fill || 'white';
-    selectedProvinceLayer.style.fill = fill;
+  useEffect(() => {
+    const levelStrFromURL = searchParams.get('levels');
+    const levelArr = levelStringToArray(levelStrFromURL);
+    setProvinceLevels(levelArr);
+  }, []);
 
-    setTotalLevel(provinceLevels.reduce((a, v) => a + v.level, 0));
-    setMenuVisible(false);
-  };
+  useEffect(() => {
+    const levelStr = levelArrayToString(provinceLevels);
+    navigate(`/map?levels=${levelStr}`);
+  }, [provinceLevels]);
+
+  const handleLevelClick = useCallback(
+    (event) => {
+      const newLevel = event.target.getAttribute('level');
+
+      const index = parseInt(selectedProvinceIndex);
+      setProvinceLevels((prevProvinceLevels) => {
+        const clonePrevLevels = [...prevProvinceLevels];
+        clonePrevLevels[index] = parseInt(newLevel);
+        return clonePrevLevels;
+      });
+
+      setMenuVisible(false);
+    },
+    [selectedProvinceIndex]
+  );
 
   return (
     <div>
       <PhilippinesMapJSX
-        setSelectedProvince={setSelectedProvince}
+        provinceLevels={provinceLevels}
+        setSelectedProvinceIndex={setSelectedProvinceIndex}
         setMenuPosition={setMenuPosition}
         setMenuVisible={setMenuVisible}
-        setSelectedProvinceLayer={setSelectedProvinceLayer}
         totalLevel={totalLevel}
       />
       {menuVisible && (
@@ -54,14 +76,17 @@ const PhilippinesMap = () => {
             position: 'absolute',
             top: menuPosition.y,
             left: menuPosition.x,
-          }} >
+          }}>
           <div>
-            <div className='menu-header' onClick={() => window.open(searchUrl)}>{selectedProvince} ↗ </div>
-            {menuOptions.map(({ label, level }) => (
-              <div key={level}
+            <div className='menu-header' onClick={() => window.open(searchUrl)}>
+              {selectedProvinceName} ↗{' '}
+            </div>
+            {MENU_OPTIONS.map(({ label, level }) => (
+              <div
+                key={level}
                 level={level}
                 className={`level-${level}`}
-                onClick={(event) => handleLevelClick(selectedProvince, selectedProvinceLayer, event)}>
+                onClick={handleLevelClick}>
                 {label}
               </div>
             ))}
