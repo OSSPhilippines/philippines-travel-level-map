@@ -34,6 +34,40 @@ body {
   display: table-cell;
 }
 
+.Map-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Map-cta-button-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  box-sizing: border-box;
+  gap: 1rem;
+}
+
+.Map-cta-toast {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: .5rem;
+
+  background-color: #C1E1C1;
+  animation: slidein 250ms ease-in-out;
+}
+
 .Map-padding {
   background-color: #9dc3fb;
   padding-top: 20px;
@@ -116,25 +150,28 @@ svg#svg574 .province-layer path:hover {
   background-color: lightgray;
 }
 
-.save-image-button, .share-fb-button {
+.save-image-button, .reset-button, .share-fb-button {
   position: relative;
   background-color: white;
   border-radius: 10px;
+  border: none;
+  cursor: pointer;
   min-height: 30px;
   align-items: center;
   text-align: center;
   display: flex;
   width: 100px;
   justify-content: center;
-  left: 50%;
-  margin-left: -50px;
-  margin-bottom: 10px;
   padding: 3px;
 }
 
-.save-image-button:hover {
+.save-image-button:hover, .reset-button:hover {
   cursor: pointer;
   background-color: lightgray;
+}
+
+.reset-button:disabled {
+  cursor: not-allowed;
 }
 
 .share-fb-button {
@@ -230,5 +267,14 @@ svg#svg574 .province-layer path:hover {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
   }
 }

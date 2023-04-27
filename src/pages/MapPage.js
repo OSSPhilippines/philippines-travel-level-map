@@ -1,4 +1,4 @@
-import React, {  useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { toJpeg } from 'html-to-image'
 
@@ -7,10 +7,18 @@ import FacebookLogo from '../components/FacebookLogo'
 import { FB_SHARE_URL } from '../utils/constants'
 import '.././App.css'
 
+import AppContext from '../context/app.context';
+
 function MapPage() {
     const divRef = useRef(null);
     const location = useLocation();
+
+    const [isResetMapToastVisible, setIsResetMapToastVisible] = useState(false);
+
+    const { provinceLevels, setProvinceLevels } = useContext(AppContext);
   
+    const noProvinceSelected = provinceLevels.every(level => level === 0);
+
     const fileName = 'phMap.jpg'
   
     const downloadJpg = useCallback(() => {
@@ -33,6 +41,14 @@ function MapPage() {
       const navUrl = FB_SHARE_URL + window.location.href;
       window.open(navUrl, 'mywindow', 'width=350,height=250');
     }, [location.search]);
+    
+    const handleReset = () => {
+      if(noProvinceSelected) return;
+
+      setProvinceLevels(provinceLevels => provinceLevels.map(_ => 0))
+      setIsResetMapToastVisible(true)
+      setTimeout(() => setIsResetMapToastVisible(false), 2500)
+    };
 
     return (
         <section>
@@ -41,10 +57,17 @@ function MapPage() {
                 <section className='Map-padding' ref={divRef}>
                     <Map/>
                 </section>
-                <section className='save-image-button' onClick={downloadJpg}>Save Image</section>
-                <section className='share-fb-button' onClick={handleFacebookShare}>
-                  <FacebookLogo />
-                  Share
+
+                <section className='Map-cta'>
+                  <section className='Map-cta-button-container'>
+                    <button className='save-image-button' onClick={downloadJpg}>Save Image</button>
+                    <button className='reset-button' onClick={handleReset} disabled={noProvinceSelected}>Reset</button>
+                  </section>
+
+                  <button className='share-fb-button' onClick={handleFacebookShare}>
+                    <FacebookLogo />
+                    Share
+                  </button>
                 </section>
             </section>
 
@@ -73,7 +96,9 @@ function MapPage() {
                 <img src='https://s11.flagcounter.com/count2/s6dX/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/' alt='Flag Counter' border='0'/>
             </a>
         </div>
-        </section>
+
+        {isResetMapToastVisible && <div className='Map-cta-toast'>Map has been reset</div>}
+      </section>
     );
 };
 

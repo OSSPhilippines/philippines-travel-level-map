@@ -1,21 +1,22 @@
-import React, { useMemo, useState, useEffect, useCallback } from 'react';
+import React, { useMemo, useState, useEffect, useCallback, useContext } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 
 import PhilippinesMapJSX from '../PhilippinesMapJSX';
-import { PROVINCES, MENU_OPTIONS, PROVINCES_LENGTH } from '../utils/constants';
+import { PROVINCES, MENU_OPTIONS } from '../utils/constants';
 import '.././App.css';
 import {
   levelArrayToString,
   levelStringToArray,
 } from '../utils/levelConverter';
 
+import AppContext from '../context/app.context';
+
 const PhilippinesMap = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
-  const [provinceLevels, setProvinceLevels] = useState(
-    new Array(PROVINCES_LENGTH).fill(0)
-  );
+  const { provinceLevels, setProvinceLevels } = useContext(AppContext)
+
   const [selectedProvinceIndex, setSelectedProvinceIndex] = useState(0);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   const [menuVisible, setMenuVisible] = useState(false);
