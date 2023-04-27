@@ -1,4 +1,4 @@
-name: Bump version
+name: Automated Version Bump
 on:
   push:
     branches:
@@ -11,8 +11,13 @@ jobs:
       with:
         fetch-depth: '0'
 
-    - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@1.61.0 # Don't use @master unless you're happy to test the latest version
+    - name:  'Automated Version Bump'
+      uses:  'phips28/gh-action-bump-version@master'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        WITH_V: true
+      with:
+        tag-prefix: 'v'
+        minor-wording: 'add,Adds,new'
+        major-wording: 'MAJOR,cut-major'
+        patch-wording: 'patch,fixes' # Providing patch-wording will override commits defaulting to a patch bump.
+        rc-wording: 'RELEASE,alpha'
