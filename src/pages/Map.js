@@ -1,34 +1,28 @@
-import React, {
-  useMemo,
-  useState,
-  useEffect,
-  useCallback,
-  useContext,
-} from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import React, { useMemo, useState, useEffect, useCallback, useContext } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 
-import PhilippinesMapJSX from "../PhilippinesMapJSX";
-import { PROVINCES, MENU_OPTIONS } from "../utils/constants";
-import ".././App.css";
+import PhilippinesMapJSX from '../PhilippinesMapJSX';
+import { PROVINCES, MENU_OPTIONS } from '../utils/constants';
+import '.././App.css';
 import {
   levelArrayToString,
   levelStringToArray,
-} from "../utils/levelConverter";
+} from '../utils/levelConverter';
 
-import AppContext from "../context/app.context";
+import AppContext from '../context/app.context';
 
 const PhilippinesMap = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
-  const { provinceLevels, setProvinceLevels } = useContext(AppContext);
+  const { provinceLevels, setProvinceLevels } = useContext(AppContext)
 
   const [selectedProvinceIndex, setSelectedProvinceIndex] = useState(0);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   const [menuVisible, setMenuVisible] = useState(false);
 
   const selectedProvinceName = useMemo(() => {
-    return PROVINCES[selectedProvinceIndex]?.id ?? "";
+    return PROVINCES[selectedProvinceIndex]?.id ?? '';
   }, [selectedProvinceIndex]);
 
   const totalLevel = useMemo(() => {
@@ -41,7 +35,7 @@ const PhilippinesMap = () => {
     ', Philippines"';
 
   useEffect(() => {
-    const levelStrFromURL = searchParams.get("levels");
+    const levelStrFromURL = searchParams.get('levels');
     const levelArr = levelStringToArray(levelStrFromURL);
 
     // Retrieve the provinceLevels array from local storage
@@ -62,7 +56,7 @@ const PhilippinesMap = () => {
 
   const handleLevelClick = useCallback(
     (event) => {
-      const newLevel = event.target.getAttribute("level");
+      const newLevel = event.target.getAttribute('level');
 
       const index = parseInt(selectedProvinceIndex);
       setProvinceLevels((prevProvinceLevels) => {
@@ -91,24 +85,23 @@ const PhilippinesMap = () => {
       />
       {menuVisible && (
         <div
-          className="level-menu"
+          className='level-menu'
           style={{
-            position: "absolute",
+            position: 'absolute',
             top: menuPosition.y,
             left: menuPosition.x,
           }}
         >
           <div>
-            <div className="menu-header" onClick={() => window.open(searchUrl)}>
-              {selectedProvinceName} ↗{" "}
+            <div className='menu-header' onClick={() => window.open(searchUrl)}>
+              {selectedProvinceName} ↗{' '}
             </div>
             {MENU_OPTIONS.map(({ label, level }) => (
               <div
                 key={level}
                 level={level}
                 className={`level-${level}`}
-                onClick={handleLevelClick}
-              >
+                onClick={handleLevelClick}>
                 {label}
               </div>
             ))}
