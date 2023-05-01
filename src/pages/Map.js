@@ -90,8 +90,7 @@ const PhilippinesMap = () => {
             position: 'absolute',
             top: menuPosition.y,
             left: menuPosition.x,
-          }}
-        >
+          }}>
           <div>
             <div className='menu-header' onClick={() => window.open(searchUrl)}>
               {selectedProvinceName} ↗{' '}
