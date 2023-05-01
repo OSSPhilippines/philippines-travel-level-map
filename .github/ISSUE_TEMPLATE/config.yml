@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🙏 Q&A Forum
+    url: https://github.com/ossphilippines/philippines-travel-level-map/discussions/new?category=q-a
+    about: Have a question? Let us know!
+  - name: 🧠 Suggestions
+    url: https://github.com/ossphilippines/philippines-travel-level-map/discussions/new?category=brainstorm
+    about: Have an idea or suggestion? Let us know!
