@@ -39,7 +39,7 @@ const PhilippinesMap = () => {
     const levelArr = levelStringToArray(levelStrFromURL);
 
     // Retrieve the provinceLevels array from local storage
-    const storedProvinceLevels = localStorage.getItem("provinceLevels");
+    const storedProvinceLevels = localStorage.getItem('provinceLevels');
 
     //If the array exists in local storage, parse and set it as the initial state
     if (storedProvinceLevels) {
@@ -64,7 +64,7 @@ const PhilippinesMap = () => {
         clonePrevLevels[index] = parseInt(newLevel);
 
         // Save the updated provinceLevels array to local storage
-        localStorage.setItem("provinceLevels", JSON.stringify(clonePrevLevels));
+        localStorage.setItem('provinceLevels', JSON.stringify(clonePrevLevels));
 
         return clonePrevLevels;
       });
