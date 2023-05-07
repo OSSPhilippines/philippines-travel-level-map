@@ -62,7 +62,7 @@ const PhilippinesMap = () => {
 	);
 
 	return (
-		<div>
+		<div className="Map">
 			<PhilippinesMapJSX
 				provinceLevels={provinceLevels}
 				setSelectedProvinceIndex={setSelectedProvinceIndex}

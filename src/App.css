@@ -29,9 +29,18 @@ body {
 
 .Map-container {
   background-color: #9dc3fb;
-  width: 100dvw;
-  height: 100dvh;
-  display: table-cell;
+}
+
+.Map {
+  width: 100vw;
+  margin: auto;
+}
+
+@media screen and (min-width: 100vh) {
+  .Map {
+    height: 100vh;
+    width: 69vh;
+  }
 }
 
 .Map-cta {
@@ -207,6 +216,7 @@ svg#svg574 .province-layer path:hover {
 .nav-ul {
   padding-left: 20px;
   padding-bottom: 0px;
+  margin-block: 16px;
 }
 
 .link:hover {
