@@ -87,6 +87,10 @@ body {
   cursor: pointer;
 }
 
+svg#svg574 .province-layer path {
+  -webkit-tap-highlight-color: transparent;
+}
+
 svg#svg574 .province-layer path:hover {
   fill: #cccccc;
 }
