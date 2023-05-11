@@ -37,7 +37,16 @@ const PhilippinesMap = () => {
 	useEffect(() => {
 		const levelStrFromURL = searchParams.get('levels');
 		const levelArr = levelStringToArray(levelStrFromURL);
-		setProvinceLevels(levelArr);
+
+  	// Retrieve the provinceLevels array from local storage
+  	const storedProvinceLevels = localStorage.getItem('provinceLevels');
+
+  	//If the array exists in local storage, parse and set it as the initial state
+  	if (storedProvinceLevels) {
+  		setProvinceLevels(JSON.parse(storedProvinceLevels));
+  	} else {
+			setProvinceLevels(levelArr);
+    	}
 	}, []);
 
 	useEffect(() => {
@@ -49,12 +58,16 @@ const PhilippinesMap = () => {
 		(event) => {
 			const newLevel = event.target.getAttribute('level');
 
-			const index = parseInt(selectedProvinceIndex);
-			setProvinceLevels((prevProvinceLevels) => {
-				const clonePrevLevels = [...prevProvinceLevels];
-				clonePrevLevels[index] = parseInt(newLevel);
-				return clonePrevLevels;
-			});
+    	const index = parseInt(selectedProvinceIndex);
+    	setProvinceLevels((prevProvinceLevels) => {
+      	const clonePrevLevels = [...prevProvinceLevels];
+      	clonePrevLevels[index] = parseInt(newLevel);
+
+    		// Save the updated provinceLevels array to local storage
+    		localStorage.setItem('provinceLevels', JSON.stringify(clonePrevLevels));
+
+    		return clonePrevLevels;
+      });
 
 			setMenuVisible(false);
 		},
