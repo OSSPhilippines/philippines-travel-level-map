@@ -29,16 +29,6 @@ yarn
 npm install
 ```
 
-### Starting the Application
-
-```
-## starting the application with yarn
-yarn start
-
-## starting the application with npm
-npm start
-```
-
 ### Linting the files
 
 ```
@@ -49,7 +39,19 @@ yarn lint
 npm run lint
 ```
 
-### Building the App
+
+### Starting the Application
+
+```
+## starting the application with yarn
+yarn start
+
+## starting the application with npm
+npm start
+```
+The application should automatically open in the localhost server at: https://localhost:3000
+
+### Building the App for Production
 
 ```
 ## build the app with yarn
@@ -57,7 +59,12 @@ yarn build
 
 ## build the app with npm
 npm run build
+
+## serving with a static server
+serve -s build
 ```
+The localhost server can be opened at: https://localhost:3000
+
 
 ## Contributing Guide
 
