@@ -67,7 +67,7 @@ const PhilippinesMap = () => {
     		localStorage.setItem('provinceLevels', JSON.stringify(clonePrevLevels));
 
     		return clonePrevLevels;
-      });
+			});
 
 			setMenuVisible(false);
 		},
