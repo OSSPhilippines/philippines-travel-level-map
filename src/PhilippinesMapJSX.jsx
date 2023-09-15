@@ -35,8 +35,8 @@ const PhilippinesMapJSX = ({
       	: event.target.getBoundingClientRect().x + 200 - window.innerWidth;
 		setSelectedProvinceIndex(event.target.getAttribute('index'));
 		setMenuPosition({
-			x: event.target.getBoundingClientRect().x + window.pageXOffset - offsetX,
-			y: event.target.getBoundingClientRect().y + window.pageYOffset - offsetY,
+			x: event.target.getBoundingClientRect().x + window.scrollX - offsetX,
+			y: event.target.getBoundingClientRect().y + window.scrollY - offsetY,
 		});
 		setMenuVisible(true);
 	};
@@ -45,8 +45,8 @@ const PhilippinesMapJSX = ({
 		const targetElement = event.target.parentNode;
 		const position = targetElement.getBoundingClientRect();
 		setTooltipPosition({
-			x: position.x + window.pageXOffset,
-			y: position.y + window.pageYOffset,
+			x: position.x + window.scrollX,
+			y: position.y + window.scrollY,
 		});
 		const tooltipContent = targetElement.getAttribute('id').replace(/_/g, ' ');
 		setTooltipContent(tooltipContent);
