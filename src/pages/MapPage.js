@@ -63,6 +63,8 @@ function MapPage () {
 						<button className='reset-button' onClick={handleReset} disabled={noProvinceSelected}>Reset</button>
 					</section>
 
+					<section><i><small>To save your progress, simply save the URL.</small></i></section>
+
 					<button className='share-fb-button' onClick={handleFacebookShare}>
 						<FacebookLogo />
                     Share

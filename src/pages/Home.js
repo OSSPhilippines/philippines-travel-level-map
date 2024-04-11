@@ -6,9 +6,6 @@ import denz from '.././denz.jpg';
 const Home = () => {
 	return (
 		<section className="about">
-
-        [UPDATE] Thank you so much for making this personal project go viral like crazy!
-    
 			<h2>My Philippines Travel Level</h2>
 
     This simple web app helps you visualize how well-travelled you are in the Philippines. 
@@ -38,6 +35,11 @@ const Home = () => {
 			<br></br>
 
     Your total score will be updated accordingly. You can then save the image and share on your social media.
+
+			<br></br>
+			<br></br>
+
+	If you want to save your progress, simply save the URL.
     
 			<br></br>
 			<br></br>
