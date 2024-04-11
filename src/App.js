@@ -9,7 +9,6 @@ import NoPage from './pages/NoPage';
 function App () {
 	return (
 		<div className="App">
-			<div id="ezoic-pub-ad-placeholder-110"> </div>
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Layout />}>
@@ -19,13 +18,6 @@ function App () {
 					</Route>
 				</Routes>
 			</BrowserRouter>
-			{/*<div className="Map-container">
-        <div className="Map-padding" ref={divRef}>
-        <Map/>
-        </div>
-        <div className="save-image-button" onClick={downloadJpg}>Save Image</div>
-      </div>
-  <AdsComponent dataAdSlot='8658257981' />*/}
 		</div>
 	);
 }

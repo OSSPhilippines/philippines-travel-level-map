@@ -265,16 +265,6 @@ svg#svg574 .province-layer path:hover {
     drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 
-.donate {
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.donate-button {
-  text-align: center;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
