@@ -7,20 +7,7 @@ const Home = () => {
 	return (
 		<section className="about">
 
-        [UPDATE] Thank you so much for making this personal project go viral like crazy! 
-        If you liked this project and want it to be accessible in the future as you explore more of the Philippines, please consider donating below:
-
-			<br></br>
-			<br></br>
-
-			<div className="donate-button">
-				<form action="https://www.paypal.com/donate" method="post" target="_top">
-					<input type="hidden" name="hosted_button_id" value="RP4T6EPM6GJ9A" />
-					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-					<img alt="" border="0" src="https://www.paypal.com/en_PH/i/scr/pixel.gif" width="1" height="1" />
-				</form>
-			</div>
-
+        [UPDATE] Thank you so much for making this personal project go viral like crazy!
     
 			<h2>My Philippines Travel Level</h2>
 
@@ -81,27 +68,10 @@ const Home = () => {
 			<div className="link" onClick={() => window.open('https://www.twitter.com/denzvryan')}>Twitter↗</div>
 			<br></br>
 			<div className="link" onClick={() => window.open('https://www.linkedin.com/in/denzdelvillar')}>LinkedIn↗</div>.
-    
-			<br></br>
-			<br></br>
-
-    If you liked this project and want it to be accessible in the future, please consider donating below. Thank you!
-
-			<br></br>
-			<br></br>
-
-			<div className="donate-button">
-				<form action="https://www.paypal.com/donate" method="post" target="_top">
-					<input type="hidden" name="hosted_button_id" value="RP4T6EPM6GJ9A" />
-					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-					<img alt="" border="0" src="https://www.paypal.com/en_PH/i/scr/pixel.gif" width="1" height="1" />
-				</form>
-			</div>
 
 			<br></br>
 			<br></br>
     
-
 			<div className="flag-counter">
 				<a  href="https://info.flagcounter.com/s6dX"><img src="https://s11.flagcounter.com/count2/s6dX/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"/></a>
 			</div>
