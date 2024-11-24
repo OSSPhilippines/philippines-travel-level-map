@@ -1,5 +1,6 @@
 .App {
-  background-color: #9dc3fb;
+  background: rgb(206,17,38);
+background: linear-gradient(38deg, rgba(206,17,38,1) 35%, rgba(0,56,168,1) 65%);
 }
 
 body {
@@ -209,10 +210,51 @@ svg#svg574 .province-layer path:hover {
   height: 100h;
 }
 
+.about-container{
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr)); 
+}
+
+.about-content{
+  padding: 10px 40px;
+}
+
+.cta {
+  width:50%;
+  padding: 20px 30px;
+  border-radius:20px;
+  margin:20px auto;
+  background: linear-gradient(45deg, rgba(206,17,38,0.7) 50%, rgba(0,56,168,1) 65%);
+  text-align:center;
+  font-weight:bold;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cta:hover{
+  transform: scale(1.1);
+}
+
+.author-info {
+  display:flex;
+  flex-direction:column;
+}
+
+.author-info p{
+  margin:12px 0;
+  text-wrap:balance;
+  min-width: fit-content;
+}
+
+.socials {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
 .nav {
   list-style-type: none;
   text-decoration: none;
-  color: black;
+  color: white;
 
   padding-top: 10px;
 }
@@ -225,15 +267,29 @@ svg#svg574 .province-layer path:hover {
 
 .link:hover {
   cursor: pointer;
+  text-decoration:underline;
 }
 
 .link {
-  color: blue;
+  color: #FCD116;
   display: inline;
+  text-decoration:none;
 }
 
 .asterisk {
   font-size: 12px;
+}
+
+.legend{
+  list-style:none;
+}
+
+.legend li {
+  margin-bottom: 1rem;
+}
+
+.legend li:last-child {
+  margin-bottom: 0; 
 }
 
 .dp {
@@ -246,6 +302,7 @@ svg#svg574 .province-layer path:hover {
 }
 
 .flag-counter {
+  margin-top:2rem;
   text-align: center;
 }
 
@@ -264,6 +321,13 @@ svg#svg574 .province-layer path:hover {
   filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
     drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
+
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 @keyframes App-logo-spin {
   from {
