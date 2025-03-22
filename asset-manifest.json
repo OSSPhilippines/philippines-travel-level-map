@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/philippines-travel-level-map/static/css/main.3191a89f.css",
+    "main.js": "/philippines-travel-level-map/static/js/main.f4a53bac.js",
+    "static/js/787.ed60cf83.chunk.js": "/philippines-travel-level-map/static/js/787.ed60cf83.chunk.js",
+    "static/media/denz.jpg": "/philippines-travel-level-map/static/media/denz.87b8bcf1b7c9a8135302.jpg",
+    "index.html": "/philippines-travel-level-map/index.html",
+    "main.3191a89f.css.map": "/philippines-travel-level-map/static/css/main.3191a89f.css.map",
+    "main.f4a53bac.js.map": "/philippines-travel-level-map/static/js/main.f4a53bac.js.map",
+    "787.ed60cf83.chunk.js.map": "/philippines-travel-level-map/static/js/787.ed60cf83.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3191a89f.css",
+    "static/js/main.f4a53bac.js"
+  ]
+}
