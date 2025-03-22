@@ -2,7 +2,7 @@
 
 Mark the places you've visited and see which other more you wanna go to!
 
-[Demo](https://my-philippines-travel-level.com/map)
+[Demo](https://ossphilippines.github.io/philippines-travel-level-map/#/map)
 
 | Level | Description |
 | ----- | ----------- |
