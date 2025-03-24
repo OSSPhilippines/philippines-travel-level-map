@@ -2,7 +2,7 @@
   "name": "philippine-map-app",
   "version": "0.2.1",
   "private": true,
-  "homepage": "https://ossphilippines.github.io/philippines-travel-level-map",
+  "homepage": "https://my-philippines-travel-level.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
