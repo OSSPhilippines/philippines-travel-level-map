@@ -2,6 +2,9 @@
 
 Mark the places you've visited and see which other more you wanna go to!
 
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=ossphilippines/philippines-travel-level-map@github)](https://gitads.dev/v1/ad-track?source=ossphilippines/philippines-travel-level-map@github)
+
 [Demo](https://ossphilippines.github.io/philippines-travel-level-map/#/map)
 
 | Level | Description |
