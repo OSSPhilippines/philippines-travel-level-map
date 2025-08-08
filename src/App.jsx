@@ -6,14 +6,14 @@ import Home from './pages/Home';
 import MapPage from './pages/MapPage';
 import NoPage from './pages/NoPage';
 
-function App () {
+function App() {
 	return (
 		<div className="App">
 			<HashRouter>
 				<Routes>
 					<Route path="/" element={<Layout />}>
 						<Route index element={<Home />} />
-						<Route path="map" element = {<MapPage />} />
+						<Route path="map" element={<MapPage />} />
 						<Route path="*" element={<NoPage />} />
 					</Route>
 				</Routes>

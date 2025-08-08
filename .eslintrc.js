@@ -56,4 +56,5 @@ module.exports = {
 		'no-multi-str': 'off',
 		curly: 1,
 	},
+	ignorePatterns: ['**build/*'],
 };
