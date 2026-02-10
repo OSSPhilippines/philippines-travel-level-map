@@ -1,5 +1,8 @@
 # Philippines Travel Level Map
 
+![GitHub Repo Banner](https://ghrb.waren.build/banner?header=Philippines+Travel+Level+Map%F0%9F%97%BA%EF%B8%8F&subheader=Mark+the+places+you%E2%80%99ve+visited+in+the+Philippines&bg=E7F9FF-90C4E8&color=0060A0&headerfont=Ubuntu&subheaderfont=Inter&watermarkpos=bottom-right)
+<!-- Created with GitHub Repo Banner by Waren Gonzaga: https://ghrb.waren.build -->
+
 Mark the places you've visited and see which other more you wanna go to!
 
 ## GitAds Sponsored
