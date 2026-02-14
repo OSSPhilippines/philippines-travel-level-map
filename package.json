@@ -11,16 +11,15 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "vite",
+    "build": "vite build",
+    "test": "vitest",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .js,.jsx --fix",
-    "predeploy": "npm run build",
+    "predeploy": "vite preview",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -42,8 +41,12 @@
     ]
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
     "eslint": "^8.39.0",
     "eslint-plugin-react": "^7.32.2",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "jsdom": "^26.1.0",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4"
   }
 }
