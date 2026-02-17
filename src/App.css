@@ -187,19 +187,58 @@ svg#svg574 .province-layer path:hover {
   cursor: not-allowed;
 }
 
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.share-fb-button,
+.share-gh-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 100px;
+  min-height: 30px;
+  padding: 3px 8px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
 .share-fb-button {
   color: white;
-  background: #4267b3;
-  margin-bottom: 20px;
+  background: linear-gradient(135deg, #4267b3, #2d4e91);
+  margin: 0;
 }
 
 .share-fb-button:hover {
-  cursor: pointer;
-  background-color: #2d487d;
+  background: linear-gradient(135deg, #365899, #243d78);
 }
 
-.share-fb-button svg {
-  margin-right: 4px;
+.share-fb-button svg,
+.share-gh-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.share-gh-button {
+  background: #ffffff;
+  color: #0b1a2c;
+  border: 1px solid #c8d8ef;
+}
+
+.share-gh-button:hover {
+  background: #f2f6fc;
 }
 
 .about {
