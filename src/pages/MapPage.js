@@ -4,6 +4,7 @@ import { toJpeg } from 'html-to-image';
 
 import Map from './Map';
 import FacebookLogo from '../components/FacebookLogo';
+import GithubIcon from '../components/GithubIcon';
 import { FB_SHARE_URL } from '../utils/constants';
 import '.././App.css';
 
@@ -41,6 +42,10 @@ function MapPage () {
 		const navUrl = FB_SHARE_URL + window.location.href;
 		window.open(navUrl, 'mywindow', 'width=350,height=250');
 	}, [location.search]);
+
+	const handleGithubOpen = useCallback(() => {
+		window.open('https://github.com/OSSPhilippines/philippines-travel-level-map', '_blank');
+	}, []);
     
 	const handleReset = () => {
 		if (noProvinceSelected) {return;}
@@ -64,12 +69,18 @@ function MapPage () {
 					</section>
 
 					<section><i><small>To save your progress, simply save the URL.</small></i></section>
-
-					<button className='share-fb-button' onClick={handleFacebookShare}>
-						<FacebookLogo />
-                    Share
-					</button>
 				</section>
+			</section>
+
+			<section className='share-buttons'>
+				<button className='share-fb-button' onClick={handleFacebookShare}>
+					<FacebookLogo />
+					Share
+				</button>
+				<button className='share-gh-button' onClick={handleGithubOpen}>
+					<GithubIcon />
+					Star on GitHub
+				</button>
 			</section>
 
 			<div className='flag-counter'>
