@@ -1,0 +1,227 @@
+.journal-page {
+  min-height: 100vh;
+  padding: 32px 16px 64px;
+  background: #f7f5f0;
+  color: #292621;
+}
+
+.journal-header,
+.journal-form {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.journal-header {
+  margin-bottom: 24px;
+}
+
+.journal-header h1 {
+  margin: 4px 0 8px;
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.journal-header p {
+  margin: 0;
+  color: #6d675f;
+}
+
+.journal-eyebrow {
+  color: #316b57 !important;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.journal-form {
+  display: grid;
+  gap: 18px;
+}
+
+.journal-section {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #ded9cf;
+  border-radius: 18px;
+}
+
+.journal-section h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.journal-section label,
+.journal-section legend {
+  color: #49443e;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.journal-section input,
+.journal-section textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 7px;
+  padding: 12px;
+  border: 1px solid #d5cfc5;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #292621;
+  font: inherit;
+}
+
+.journal-section textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.journal-section input:focus,
+.journal-section textarea:focus,
+.journal-section button:focus {
+  outline: 3px solid rgba(49, 107, 87, 0.2);
+  border-color: #316b57;
+}
+
+.journal-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.journal-section fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.level-options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.level-card {
+  display: grid;
+  min-height: 80px;
+  place-content: center;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid #d5cfc5;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.level-card input {
+  position: absolute;
+  width: 1px;
+  opacity: 0;
+}
+
+.level-card strong {
+  font-size: 1.1rem;
+}
+
+.level-card span {
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.level-card.selected {
+  border: 2px solid #316b57;
+  background: #e5f0ea;
+  color: #24513f;
+}
+
+.tag-field {
+  display: grid;
+  gap: 8px;
+}
+
+.tag-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.tag-input-row input {
+  margin-top: 0;
+}
+
+.tag-input-row button {
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #e5f0ea;
+  color: #24513f;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.journal-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #e5f0ea;
+  color: #24513f;
+  font-size: 0.85rem;
+}
+
+.journal-tag button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.journal-message {
+  margin: 0;
+  padding: 12px;
+  border-radius: 10px;
+  background: #e5f0ea;
+  color: #24513f;
+  font-weight: 700;
+}
+
+.save-journal-button {
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 12px;
+  background: #316b57;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.save-journal-button:hover {
+  background: #24513f;
+}
+
+@media (max-width: 650px) {
+  .journal-two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .level-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journal-section {
+    padding: 17px;
+  }
+}
